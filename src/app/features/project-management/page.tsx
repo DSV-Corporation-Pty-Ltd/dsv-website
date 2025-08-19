@@ -2,9 +2,10 @@ import React from 'react';
 import FeatureIntroSection from '../../../components/sections/FeaturePages/FeatureIntroSection';
 import FeatureBenefitsSection from '../../../components/sections/FeaturePages/FeatureBenefitsSection';
 import FeatureCtaSection from '../../../components/sections/FeaturePages/FeatureCtaSection';
+import { SVGProps } from 'react';
 
 // You can use a specific icon for this page, or even an SVG animation
-const ProjectManagementIcon = (props: any) => (
+const ProjectManagementIcon = (props: SVGProps<SVGSVGElement>) => (
     <svg {...props} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m5.234 8.234L15 14.25m2.25 2.25l-1.5-1.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
     </svg>

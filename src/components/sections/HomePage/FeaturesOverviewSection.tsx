@@ -108,41 +108,47 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { SVGProps } from 'react';
+
+import {MotionProps, motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import SectionHeading from '../../ui/SectionHeading';
 import Card from '../../ui/Card';
 
+
+type IconProps = SVGProps<SVGSVGElement> & MotionProps;
+
+
 const icons = {
-  project: (props: any) => (
+  project: (props: IconProps) => (
     <motion.svg whileHover={{ scale: 1.2 }} transition={{ type: 'spring' }} {...props} xmlns="http://www.w3.org/2000/svg" fill="none"
       viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round"
         d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m5.234 8.234L15 14.25m2.25 2.25l-1.5-1.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
     </motion.svg>
   ),
-  task: (props: any) => (
+  task: (props: IconProps) => (
     <motion.svg whileHover={{ rotate: 360 }} transition={{ duration: 1 }} {...props} xmlns="http://www.w3.org/2000/svg" fill="none"
       viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round"
         d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
     </motion.svg>
   ),
-  time: (props: any) => (
+  time: (props: IconProps) => (
     <motion.svg whileHover={{ scale: 1.2 }} transition={{ type: 'spring' }} {...props} xmlns="http://www.w3.org/2000/svg" fill="none"
       viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round"
         d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
     </motion.svg>
   ),
-  client: (props: any) => (
+  client: (props: IconProps) => (
     <motion.svg whileHover={{ y: -5 }} transition={{ type: 'spring' }} {...props} xmlns="http://www.w3.org/2000/svg" fill="none"
       viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round"
         d="M18 18.75c0 .621-.504 1.125-1.125 1.125H5.625c-.621 0-1.125-.504-1.125-1.125V9.75M18 18.75V9.75m0 9.003L15.375 12M18 12.75l-2.625-2.625M5.232 10.617 10 6" />
     </motion.svg>
   ),
-  feedback: (props: any) => (
+  feedback: (props: IconProps) => (
     <motion.svg whileHover={{ rotate: [0, 10, -10, 0] }} transition={{ duration: 0.6 }} {...props} xmlns="http://www.w3.org/2000/svg" fill="none"
       viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round"
@@ -150,7 +156,7 @@ const icons = {
       <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z" />
     </motion.svg>
   ),
-  employee: (props: any) => (
+  employee: (props: IconProps) => (
     <motion.svg whileHover={{ scale: 1.15 }} transition={{ type: 'spring' }} {...props} xmlns="http://www.w3.org/2000/svg" fill="none"
       viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
       <path strokeLinecap="round" strokeLinejoin="round"
