@@ -1,0 +1,57 @@
+/* src/app/login/login.css */
+
+/* Background Gradient for the whole page */
+.login-background {
+  background: linear-gradient(to bottom right, #e0f2f7, #e8eaf6, #ede7f6); /* Using lighter shades */
+  /* Ensure min-height is applied in your JSX for full screen */
+  /* min-height: 100vh; */ /* This is handled by Tailwind's min-h-screen in JSX */
+}
+
+/* Keyframes for the Blob Animation */
+@keyframes login-blob-animation {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+/* Base style for all blobs */
+.login-blob {
+  animation: login-blob-animation 7s infinite; /* Apply the animation */
+}
+
+/* Specific positioning and animation delays for each blob */
+.login-blob-1 {
+  top: 25%; /* equivalent to top-1/4 */
+  left: 25%; /* equivalent to left-1/4 */
+  animation-delay: 0s; /* First blob starts immediately */
+}
+
+.login-blob-2 {
+  bottom: 25%; /* equivalent to bottom-1/4 */
+  right: 25%; /* equivalent to right-1/4 */
+  animation-delay: 2s; /* Second blob starts after 2 seconds */
+}
+
+.login-blob-3 {
+  top: 50%; /* equivalent to top-1/2 */
+  left: 50%; /* equivalent to left-1/2 */
+  transform: translate(-50%, -50%); /* equivalent to -translate-x-1/2 -translate-y-1/2 */
+  animation-delay: 4s; /* Third blob starts after 4 seconds */
+}
+
+/* Backdrop filter for the card (simulating backdrop-blur-sm bg-opacity-80) */
+/* Note: backdrop-filter has varying browser support and might need prefixes */
+.login-card-backdrop {
+  background-color: rgba(255, 255, 255, 0.8); /* bg-opacity-80 */
+  -webkit-backdrop-filter: blur(4px); /* For Safari */
+  backdrop-filter: blur(4px); /* blur-sm equivalent, adjust px as needed */
+}

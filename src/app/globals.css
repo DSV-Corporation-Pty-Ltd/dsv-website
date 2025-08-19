@@ -24,3 +24,53 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+html, body {
+  scroll-behavior: smooth; /* For smooth scrolling to anchor links */
+}
+
+@keyframes borderAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-border {
+  background-size: 300% 300%;
+  animation: borderAnimation 4s ease infinite;
+}
+
+ /* src/app/globals.css or src/styles/globals.css */
+
+/* Custom Keyframes */
+@keyframes gradient_xy {
+  0%, 100% {
+    background-size: 400% 400%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+@keyframes scroll-left {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+
+.animate-gradient-xy-custom {
+  animation: gradient_xy 15s ease infinite;
+}
+
+.animate-scroll-left-slow-custom {
+  animation: scroll-left 40s linear infinite;
+}
